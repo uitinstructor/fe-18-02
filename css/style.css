@@ -29,11 +29,19 @@ body {
   font-size: 12px;
   color: #444444;
   text-transform: capitalize;
+}
+
+.Twitter {
+  fill: #22b3df;
+  width: 24px
+  stroke: #0ff;
 
 
 }
-
-
+.Twitter:hover {
+  fill: #ff0;
+  stroke: #f0f;
+}
 .ovh {
   overflow: hidden;
 }
@@ -43,7 +51,7 @@ body {
 }
 
 .wrapper {
-  width: 940px;
+  max-width: 940px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -89,11 +97,15 @@ body {
 .site-nav ul{
   margin: 0;
   padding: 0;
+  overflow: hidden;
   list-style-type: none;
 }
 
 .site-nav li {
   float: left;
+}
+
+.site-nav li + li {
   margin-left: 19px;
 }
 
@@ -217,12 +229,16 @@ body {
 .site-footer {
   padding: 60px 30px;
   background-color: #444444;
+  overflow: hidden;
 
 }
 
 .social {
   overflow: hidden;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
 }
 
 .social li {
@@ -259,6 +275,54 @@ body {
   background-position: 0 -17px;
 }
 
+
+.copy {
+  float: right;
+  color: #fff;
+}
 .google-map {
   width: 100%;
+}
+
+
+@media (max-width: 560px) {
+  .site-nav {
+    float: none;
+    margin-top: 35px;
+  }
+
+  .site-nav ul {
+    display: inline-block;
+  }
+
+  .site-header__top {
+    text-align: center;
+  }
+
+  .site-header h1 {
+    margin-top: 50px;
+  }
+
+  .site-header,
+  .main,
+  .site-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .copy,
+  .social {
+    float: none;
+  }
+
+  .social {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  .site-footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
